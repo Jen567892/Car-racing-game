@@ -18,8 +18,9 @@ var background_img_array = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"];
 random_number = Math.floor(Math.random()*4);
 //background_img = background_img_array[random_number];
 
-background_img = "bg1.png";
-rover_img = "rover.png";
+background_img = "road.jpeg";
+car1_img = "car1.jpg";
+car2_img = "car(2).jpg";
 
 function add(){
     background_img_tag = new Image();
@@ -27,9 +28,13 @@ function add(){
 background_img_tag.src = background_img;
 
 
-rover_img_tag = new Image();
-rover_img_tag.onload = uploadRover;
-rover_img_tag.src = rover_img;
+car1_img_tag = new Image();
+car1_img_tag.onload = uploadCar1;
+car1_img_tag.src = car1_img;
+
+car2_img_tag = new Image();
+car2_img_tag.onload = uploadCar2;
+car2_img_tag.src = car2_img;
 }
 
 function uploadBackground(){
@@ -37,13 +42,13 @@ function uploadBackground(){
 }
 
 function uploadCar1(){
-    ctx.drawImage(car1_img, car1_x, car1_y, car1_width, car1_height);
+    ctx.drawImage(car1_img_tag, car1_x, car1_y, car1_width, car1_height);
 }
 
 function uploadCar2(){
-    ctx.drawImage(car2_img, car2_x, car2_y, car2_width, car2_height);
+    ctx.drawImage(car2_img_tag, car2_x, car2_y, car2_width, car2_height);
 }
-window.addEventListener("keydown",my_keydown);
+/*window.addEventListener("keydown",my_keydown);
 
 function add(){
 background_imgTag = new Image(); //defining a new variable with a new image
@@ -159,4 +164,4 @@ function car2down(){
         uploadBackground();
         uploadRover();
     }
-}
+}*/
